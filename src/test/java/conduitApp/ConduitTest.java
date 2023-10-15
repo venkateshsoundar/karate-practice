@@ -21,6 +21,8 @@ class ConduitTest {
     
     @Test
     void testParallel() {
+    	
+    	System.setProperty("karate.env", "dev");	
         Results results = Runner.path("classpath:conduitApp").tags("@CoderTest").parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
