@@ -44,7 +44,7 @@ Feature: New user signup
       }
       }
       """
-  @CoderTest
+ 
   Scenario Outline: New User Signup Error Message Validation
   
     * def randomemail = datagenerator.getRandomEmail()
