@@ -1,7 +1,7 @@
 Feature: Tests for Home Page
-  
+
   Background: Define URL
-  Given url 'https://api.realworld.io/api/'
+    Given url 'https://api.realworld.io/api/'
 
   Scenario: Get All Tags
     Given path 'tags'

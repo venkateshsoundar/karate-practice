@@ -12,10 +12,16 @@ function fn() {
   if (env == 'dev') {
 	config.userEmail= 'venkikarate@gmail.com'
 	config.userpassword='1992venkappa'
+	
     // customize
     // e.g. config.foo = 'bar';
   } else if (env == 'qa') {
     // customize
   }
+
+var accessToken = karate.callSingle('classpath:conduitApp/helpers/CreateToken.feature',config).AuthToken
+karate.configure('headers',{Authorization: 'Token ' + accessToken})
+
+
   return config;
 }
